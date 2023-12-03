@@ -1,0 +1,14 @@
+
+.card-heading {
+    padding: 30px 0px;
+}
+
+.card-heading-title {
+    width: fit-content;
+}
+
+.card-heading-divider {
+    border: 2px solid aliceblue;
+    width: inherit;
+    margin-top: 2%;
+  }

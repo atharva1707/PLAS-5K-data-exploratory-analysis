@@ -1,0 +1,13 @@
+body {
+  padding: 5% 10%;
+  background-color: #141414;
+  color: aliceblue;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
