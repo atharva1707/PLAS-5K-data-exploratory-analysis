@@ -18,6 +18,7 @@ import scatter5 from './../../images/scatter5.png';
 import scatter6 from './../../images/scatter6.png';
 import error1 from './../../images/error1.png';
 import error2 from './../../images/error2.png';
+import correlation from './../../images/correlation.png';
 export default function Projects(props) {
 
   const [currentHistogram, setCurrentHistogram] = useState(0);
@@ -31,7 +32,7 @@ export default function Projects(props) {
     histogram6,
     histogram7,
     histogram8
-    
+
   ];
 
   const scatters = [
@@ -95,6 +96,9 @@ export default function Projects(props) {
       />
 
 
+
+
+
       <div style={{ display: 'flex', height: '70vh' }}>
         <div style={{ flex: 1, padding: '20px', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <div style={{ position: 'relative', overflow: 'hidden', width: '100%', height: '100%' }}>
@@ -156,17 +160,26 @@ export default function Projects(props) {
       </div>
 
 
-
-
-
       <div style={{ display: 'flex', height: '80vh' }}>
-        
+        <div style={{ flex: 1, padding: '20px', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div style={{ position: 'relative', overflow: 'hidden', width: '100%', height: '100%' }}>
+            <img style={{ marginTop: '60px', width: '100%', height: 'auto', transition: 'transform 0.5s ease-in-out' }} src={scatters[currentScatter]} alt={`Slide ${currentScatter + 1}`} />
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+            <button style={{ padding: '8px 16px', cursor: 'pointer', backgroundColor: 'transparent', border: '0', color: 'white' }} onClick={prevScatter} disabled={currentScatter === 0}>
+              <NavigateBefore />
+            </button>
+            <button style={{ padding: '8px 16px', cursor: 'pointer', backgroundColor: 'transparent', border: '0', color: 'white' }} onClick={nextScatter} disabled={currentScatter === scatters.length - 1}>
+              <NavigateNext />
+            </button>
+          </div>
+        </div>
         <div style={{ flex: 1, padding: '20px', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
           <h1 style={{ marginBottom: '20px', color: '#ffffff' }}>Scatterplots</h1>
           <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
-          Scatter plots are useful for visualizing the relationship between two continuous variables, revealing patterns, trends, and potential correlations in the data.          </p>
+            Scatter plots are useful for visualizing the relationship between two continuous variables, revealing patterns, trends, and potential correlations in the data.          </p>
 
-          <ul style={{ paddingTop: '50px',listStyleType: 'none', padding: 0, marginTop: '10px' }}>
+          <ul style={{ paddingTop: '50px', listStyleType: 'none', padding: 0, marginTop: '10px' }}>
             <li style={{ marginBottom: '10px' }}>
               <h4 style={{ marginBottom: '5px', color: '#ffffff' }}>Relation between Binding affinity, polar solvation and vanderwall:</h4>
               <p style={{ fontSize: '14px', lineHeight: '1.4', color: '#555' }}>
@@ -189,19 +202,7 @@ export default function Projects(props) {
             </li>
           </ul>
         </div>
-        <div style={{ flex: 1, padding: '20px', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <div style={{ position: 'relative', overflow: 'hidden', width: '100%', height: '100%' }}>
-            <img style={{ marginTop: '60px', width: '100%', height: 'auto', transition: 'transform 0.5s ease-in-out' }} src={scatters[currentScatter]} alt={`Slide ${currentScatter + 1}`} />
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-            <button style={{ padding: '8px 16px', cursor: 'pointer', backgroundColor: 'transparent', border: '0', color: 'white' }} onClick={prevScatter} disabled={currentScatter === 0}>
-              <NavigateBefore />
-            </button>
-            <button style={{ padding: '8px 16px', cursor: 'pointer', backgroundColor: 'transparent', border: '0', color: 'white' }} onClick={nextScatter} disabled={currentScatter === scatters.length - 1}>
-              <NavigateNext />
-            </button>
-          </div>
-        </div>
+
 
       </div>
 
@@ -223,11 +224,46 @@ export default function Projects(props) {
         </div>
         <div style={{ flex: 1, padding: '20px', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
           <h1 style={{ marginTop: '50px', marginBottom: '20px', color: '#ffffff' }}>Error Analysis</h1>
-          <p style={{ marginTop: '50px',fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
-          Error analysis is vital for data exploratory analysis as it uncovers and addresses data quality issues, ensuring the reliability of results. Detecting errors enhances trust in the dataset, optimizes data cleaning processes, and improves model performance, crucial for accurate decision-making. Analyzing errors facilitates effective visualization, mitigates biases, and supports data documentation, saving time and resources. It ensures compliance with standards in fields where data integrity is critical. Early error identification prevents downstream issues and contributes to a comprehensive understanding of the dataset, fostering collaboration and adherence to quality benchmarks.          </p>
+          <p style={{ marginTop: '50px', fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
+            Error analysis is vital for data exploratory analysis as it uncovers and addresses data quality issues, ensuring the reliability of results. Detecting errors enhances trust in the dataset, optimizes data cleaning processes, and improves model performance, crucial for accurate decision-making. Analyzing errors facilitates effective visualization, mitigates biases, and supports data documentation, saving time and resources. It ensures compliance with standards in fields where data integrity is critical. Early error identification prevents downstream issues and contributes to a comprehensive understanding of the dataset, fostering collaboration and adherence to quality benchmarks.          </p>
 
 
-            
+
+        </div>
+
+      </div>
+
+
+      <div style={{ display: 'flex', height: '100vh' }}>
+        <div style={{ flex: 1, padding: '20px', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+          <div style={{ position: 'relative', overflow: 'hidden', width: '100%', height: '100%' }}>
+            <img style={{ marginTop: '10px', width: '100%', height: 'auto', transition: 'transform 0.5s ease-in-out' }} src={correlation} alt={`Slide ${currentHistogram + 1}`} />
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+          </div>
+        </div>
+        <div style={{ flex: 1, padding: '20px', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+          <h1 style={{ marginBottom: '20px', color: '#ffffff' }}>Correlation Results</h1>
+          <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
+            Correlation analysis is a crucial step in exploring and understanding relationships between different columns (variables) in a dataset. Examining correlations provides valuable insights into the underlying patterns and dependencies within the data.           </p>
+
+          <ul style={{ listStyleType: 'none', padding: 0, marginTop: '10px' }}>
+            <li style={{ marginBottom: '10px' }}>
+              <h4 style={{ marginBottom: '5px', color: '#ffffff' }}>high positive correlation between binding_affinity, non_polar_solvation and van-der-wall force
+              </h4>
+              <p style={{ fontSize: '14px', lineHeight: '1.4', color: '#555' }}>
+                A high correlation between "binding_affinity," "non_polar_solvation," and "vdW (van der Waals) force" suggests a strong linear relationship between these three variables in your dataset.              </p>
+            </li>
+
+            <li style={{ marginBottom: '10px' }}>
+              <h4 style={{ marginBottom: '5px', color: '#ffffff' }}>High negative correlation between electrostatic and non polar solvation
+              </h4>
+              <p style={{ fontSize: '14px', lineHeight: '1.4', color: '#555' }}>
+                A high negative correlation between electrostatic and non-polar solvation energies suggests that as one of these variables increases, the other tends to decrease, and vice versa.               </p>
+            </li>
+
+
+          </ul>
         </div>
 
       </div>

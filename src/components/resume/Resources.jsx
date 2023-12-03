@@ -17,13 +17,7 @@ function Resources(props) {
             id="Resources"
             className="resources"
         >
-            <Card
-                title="Resources"
-                requireHeaders={false}
-                resourceList={data}
-                asList={false}
-                isToggleRequired={false}
-            />
+            
         </section>
     )
 }
