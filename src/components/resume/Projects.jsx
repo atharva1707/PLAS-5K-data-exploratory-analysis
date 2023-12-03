@@ -16,7 +16,8 @@ import scatter3 from './../../images/scatter3.png';
 import scatter4 from './../../images/scatter4.png';
 import scatter5 from './../../images/scatter5.png';
 import scatter6 from './../../images/scatter6.png';
-
+import error1 from './../../images/error1.png';
+import error2 from './../../images/error2.png';
 export default function Projects(props) {
 
   const [currentHistogram, setCurrentHistogram] = useState(0);
@@ -43,7 +44,8 @@ export default function Projects(props) {
   ];
 
   const errors = [
-
+    error1,
+    error2
   ];
 
   const nextHistogram = () => {
@@ -220,47 +222,12 @@ export default function Projects(props) {
           </div>
         </div>
         <div style={{ flex: 1, padding: '20px', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-          <h1 style={{ marginBottom: '20px', color: '#ffffff' }}>Histograms</h1>
-          <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
-            Histograms are crucial for data analysis. They provide a visual representation of the distribution of a dataset, helping analysts and researchers understand the underlying patterns and characteristics of the data.
-          </p>
+          <h1 style={{ marginTop: '50px', marginBottom: '20px', color: '#ffffff' }}>Error Analysis</h1>
+          <p style={{ marginTop: '50px',fontSize: '14px', lineHeight: '1.6', color: '#666' }}>
+          Error analysis is vital for data exploratory analysis as it uncovers and addresses data quality issues, ensuring the reliability of results. Detecting errors enhances trust in the dataset, optimizes data cleaning processes, and improves model performance, crucial for accurate decision-making. Analyzing errors facilitates effective visualization, mitigates biases, and supports data documentation, saving time and resources. It ensures compliance with standards in fields where data integrity is critical. Early error identification prevents downstream issues and contributes to a comprehensive understanding of the dataset, fostering collaboration and adherence to quality benchmarks.          </p>
 
-          <ul style={{ listStyleType: 'none', padding: 0, marginTop: '10px' }}>
-            <li style={{ marginBottom: '10px' }}>
-              <h4 style={{ marginBottom: '5px', color: '#ffffff' }}>Data Distribution Visualization:</h4>
-              <p style={{ fontSize: '14px', lineHeight: '1.4', color: '#555' }}>
-                Histograms visually represent the distribution of a dataset, aiding in understanding patterns and characteristics.
-              </p>
-            </li>
 
-            <li style={{ marginBottom: '10px' }}>
-              <h4 style={{ marginBottom: '5px', color: '#ffffff' }}>Identifying Central Tendencies:</h4>
-              <p style={{ fontSize: '14px', lineHeight: '1.4', color: '#555' }}>
-                Central tendencies like mean, median, and mode can be identified from the shape of the histogram, providing insights into the distribution.
-              </p>
-            </li>
-
-            <li style={{ marginBottom: '10px' }}>
-              <h4 style={{ marginBottom: '5px', color: '#ffffff' }}>Outlier Detection:</h4>
-              <p style={{ fontSize: '14px', lineHeight: '1', color: '#555' }}>
-                Histograms make it easy to identify outliers, which may indicate errors or interesting phenomena in the dataset.
-              </p>
-            </li>
-
-            <li style={{ marginBottom: '10px' }}>
-              <h4 style={{ marginBottom: '5px', color: '#ffffff' }}>Understanding Data Spread:</h4>
-              <p style={{ fontSize: '14px', lineHeight: '1.4', color: '#555' }}>
-                Histograms assist in assessing the spread or dispersion of the data, providing insights into variability and range.
-              </p>
-            </li>
-
-            <li style={{ marginBottom: '10px' }}>
-              <h4 style={{ marginBottom: '5px', color: '#ffffff' }}>Binning for Grouping Data:</h4>
-              <p style={{ fontSize: '14px', lineHeight: '1.4', color: '#555' }}>
-                Histograms use bins to group data points into intervals, allowing analysts to highlight specific patterns or trends by adjusting bin widths.
-              </p>
-            </li>
-          </ul>
+            
         </div>
 
       </div>
